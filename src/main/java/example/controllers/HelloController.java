@@ -3,7 +3,6 @@ package example.controllers;
 /**
  *
  */
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,7 +10,7 @@ import java.io.*;
 
 @RestController
 public class HelloController {
-    @Value("${message.greeting.location}") private String message;
+    private String message = "D:/MyPrograms/HelloMicroService/README.md";
 
     @RequestMapping("/")
     public String index() throws IOException {
