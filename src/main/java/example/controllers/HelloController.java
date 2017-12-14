@@ -16,6 +16,6 @@ public class HelloController {
     @RequestMapping("/")
     public String index() throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(message)));
-        return "Hello " + in.readLine();
+        return in.readLine();
     }
 }
