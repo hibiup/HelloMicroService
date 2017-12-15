@@ -8,6 +8,8 @@
 
     <properties>
         <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
+        <spring.boot.admin.version>1.5.4</spring.boot.admin.version>
+        <spring.swagger2.version>2.7.0</spring.swagger2.version>
     </properties>
 
     <dependencies>
@@ -24,5 +26,15 @@
             <version>${spring.boot.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${spring.swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${spring.swagger2.version}</version>
+        </dependency>
     </dependencies>
 </project>
