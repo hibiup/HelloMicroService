@@ -1,9 +1,7 @@
 package example.controllers;
 
-/**
- *
- */
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +12,12 @@ import java.io.*;
 public class HelloController {
     @Value("${message.location}") private String message;
 
-    @RequestMapping(value="/", method =  RequestMethod.GET )
+    @RequestMapping(value="/",
+            method =  RequestMethod.GET ,
+            consumes = { MediaType.ALL_VALUE },
+            produces = {
+                    MediaType.ALL_VALUE
+    })
     public String index() throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(message)));
         return in.readLine();
