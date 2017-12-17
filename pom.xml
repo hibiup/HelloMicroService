@@ -2,15 +2,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hibiup</groupId>
-    <artifactId>hello-microservice</artifactId>
+    <artifactId>hello-demo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <properties>
         <spring.boot.version>1.5.9.RELEASE</spring.boot.version>
         <spring.boot.admin.version>1.5.4</spring.boot.admin.version>
         <spring.swagger2.version>2.7.0</spring.swagger2.version>
     </properties>
+
+    <modules>
+        <module>AdminConsole</module>
+        <module>RestService</module>
+    </modules>
 
     <profiles>
         <profile>
@@ -59,28 +64,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <version>${spring.boot.version}</version>
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${spring.swagger2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${spring.swagger2.version}</version>
-        </dependency>
     </dependencies>
 </project>
